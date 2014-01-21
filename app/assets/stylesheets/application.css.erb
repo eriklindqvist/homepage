@@ -1,0 +1,153 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+h1 {
+    font-family: pt-sans, sans-serif;
+    font-weight: lighter;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: source-sans-pro, sans-serif;
+}
+
+#navigation {
+    background-color: #333;
+    color: #fff;    
+}
+
+#navigation a, #navigation h1 {
+    margin: 5pt;
+    display: inline-block;
+    text-decoration: none;
+    color: #bbb;
+    text-shadow: 1px 1px 1px #000;
+    font-family: pt-sans, sans-serif;
+    font-weight:lighter;
+}
+
+#navigation h1, #navigation a {
+    margin-right: 20pt;
+}
+
+#navigation a:hover {
+    color: #ddd;
+}
+
+#blue {
+    height: 250pt;
+    background-color: #7bc;
+    background: linear-gradient(#5a79a8, #69c3c3);
+    color: #fff;
+}
+
+#welcome, #columns, #bar, #footer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#content {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #6ab;
+    background-color: #eee;
+    padding: 5pt;
+    color: #222;
+}
+
+#columns {
+    display:block;
+    vertical-align:top;
+}
+
+#columns div {
+    font-family: open-sans, sans-serif;
+    font-weight: lighter;
+    font-size: 10pt;
+    width: 220px;
+    margin: 16pt;
+    display: inline-table;
+}
+
+#columns div img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    opacity: 0.8;
+}
+
+b {
+    display: block;
+    margin-bottom: 3pt;
+}
+
+#footer {
+    padding: 10pt;
+    color: #aaa;
+    font-size: 8pt;
+    text-align: center;
+}
+
+#footer a {
+    margin: 5pt;
+    padding: 5pt 10pt;
+    color: #aaa;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #66a;
+}
+
+#footer p {
+    font-size: 10pt;
+}
+
+#icon {
+    display:none;
+}
+
+#menu {
+    display: inline;   
+}
+
+@media only screen and (max-width: 48em) {
+    #menu {
+        display: none;   
+    }
+    
+    #bar a {
+        display: block; 
+        margin: 0;
+        padding: 5pt;
+        border-top: 1px solid black;
+    }
+    
+    #bar h1 a {
+        border: 0;
+    }        
+        
+    #icon {
+        display: inline;
+        float:right;
+        cursor:pointer;    
+        background-image:url(<%= asset_path 'menu.png' %>);
+        background-repeat:no-repeat;
+        width: 30px;
+        height: 24px;
+        margin: 15px;
+        opacity: 0.4;
+    }    
+}
+
