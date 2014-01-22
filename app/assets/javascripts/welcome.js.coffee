@@ -1,5 +1,5 @@
-$.get "menu", (data) ->
-    $.each $.parseJSON(data), (title, url) ->
+$.get "welcome/menu", (data) ->
+    $.each data, (title, url) ->
         $("#menu").append "<a href='#{url}'>#{title}</a>"
         
 $ ->    
