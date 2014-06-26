@@ -4,6 +4,6 @@ This is the source code for my personal homepage currently located at http://eri
 
 Requirements (or at least built using):
 
-* Ruby version 2.0.0p247
+* Ruby version 2.1.2
 
-* Ruby on Rails 4.0.2
+* Ruby on Rails 4.1.1
